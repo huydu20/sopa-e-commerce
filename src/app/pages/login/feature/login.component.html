@@ -1,0 +1,24 @@
+<app-default-layout>
+    <div class="container mx-auto">
+        <div class="center mt-[3.75rem] mb-[17.5rem]">
+            <form>
+                <div class="flex flex-col gap-[3.75rem] min-w-[29.375rem]">
+                    <h1 class="font-title font-bold text-5xl">Sign in.</h1>
+                    <div>
+                        <div class="mb-[2rem]">
+                            <div class="flex flex-col gap-2 mb-[1.5rem]">
+                                <label class="ml-4" for="email">Email address</label>
+                                <input id="email" type="text" placeholder="Enter your email address" class="outline-none p-4 border border-gray-300 rounded-3xl">
+                            </div>
+                            <button class="bg-primary text-white w-full py-4 rounded-full">Login</button>
+                        </div>
+                        <div>
+                            <span class="mr-4">New to Sopa?</span>
+                            <a routerLink="/register" class="underline underline-offset-2">Create account</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</app-default-layout>

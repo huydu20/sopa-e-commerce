@@ -1,0 +1,19 @@
+.footer .links {
+  @apply flex gap-[30px];
+  h3 {
+    @apply text-xl font-medium;
+  }
+
+  li {
+    @apply text-base hover:opacity-80;
+  }
+}
+
+.footer .social {
+  li {
+    @apply flex gap-4 text-base hover:opacity-80 items-center;
+    svg {
+        @apply fill-white text-xl
+    }
+  }
+}

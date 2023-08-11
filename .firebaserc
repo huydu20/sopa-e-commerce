@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sopa-e975d": {
+      "hosting": {
+        "angular_sopa-e-commerce": [
+          "sopa-e975d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sopa-e975d"
+  }
+}

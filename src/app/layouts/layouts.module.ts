@@ -10,7 +10,7 @@ import { ComponentsModule } from '../components/components.module';
     ComponentsModule,
     CommonModule,
   ],
-  exports: [CommonModule,DefaultLayoutComponent]
+  exports: [DefaultLayoutComponent]
 })
 
 

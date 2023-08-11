@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "angular_sopa-e-commerce",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<ng-container [ngSwitch]="type">
+  <button
+    *ngSwitchCase="'primary-green'"
+    class="rounded-full p-4 bg-primary-green hover:opacity-90 shadow"
+  >
+    <p class="min-w-[8.25rem] text-center">{{ content }}</p>
+  </button>
+  <button
+    *ngSwitchCase="'secondary'"
+    class="rounded-full py-4 bg-white hover:opacity-90 shadow"
+  >
+    <p class="min-w-[8.25rem] text-center">{{ content }}</p>
+  </button>
+  <button
+    *ngSwitchCase="'primary'"
+    class="rounded-full py-4 bg-primary hover:opacity-90 shadow"
+  >
+    <p class="min-w-[8.25rem] text-center text-white">{{ content }}</p>
+  </button>
+</ng-container>

@@ -1,5 +1,21 @@
-<div>
-  <ng-container *ngFor="let item of listCarousel; let idx; as: index">
-    <img [src]="item.src" [alt]="item.alt" />
-  </ng-container>
+<div class="w-full relative h-full">
+  <div class="w-full">
+    <ng-container *ngFor="let item of listCarousel; let idx = index">
+      <img
+        class="w-full h-full object-cover"
+        [ngClass]="idx !== slideIndex - 1 ? 'hidden' : ''"
+        [src]="item.src"
+        [alt]="item.alt"
+      />
+    </ng-container>
+  </div>
+  <div class="absolute flex gap-2 bottom-4 left-1/2 -translate-x-1/2">
+    <ng-container *ngFor="let item of listCarousel; let idx = index">
+      <button
+        (click)="changeSlide(idx)"
+        class="w-3 h-3 rounded-full shadow border border-gray-300"
+        [ngClass]="idx === slideIndex - 1 ? 'bg-primary' : 'bg-white'"
+      ></button>
+    </ng-container>
+  </div>
 </div>

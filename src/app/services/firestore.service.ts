@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
+  DocumentData,
   Firestore,
   addDoc,
   collection,
@@ -23,17 +24,14 @@ export class FirestoreService {
     return addDoc(productRef, product);
   }
 
-  getProduct(id: number): Observable<Product> {
-    const productRef = collection(
-      this.firestore,
-      FirestoreService.FIRESTORE_PRODUCTS_KEY + `/${id}`
-    );
-    return collectionData(productRef, { idField: 'id' }) as Observable<Product>;
+  getProduct(id: number) {
+    const productRef = collection(this.firestore, FirestoreService.FIRESTORE_PRODUCTS_KEY + `/${id}`);
+    return collectionData(productRef, { idField: 'id' });
   }
 
-  getAllProduct(): Observable<Product[]> {
+  getAllProduct() {
     const productsRef = collection(this.firestore, FirestoreService.FIRESTORE_PRODUCTS_KEY);
-    return collectionData(productsRef, { idField: 'id' }) as Observable<Product[]>;
+    return collectionData(productsRef, { idField: 'id' });
   }
 
   updateProduct(id: string, product: Product) {

@@ -1,0 +1,18 @@
+<div
+  class="p-6 rounded-xl w-full h-[31.25rem] shadow bg-secondary-white-smoke overflow-hidden"
+>
+  <div class="w-full h-full flex flex-col justify-between">
+    <img
+      class="w-full h-2/3 object-cover hover:scale-110 transition-all cursor-pointer"
+      [src]="product.image"
+      [alt]="product.name"
+    />
+    <div class="mt-[6rem]">
+      <h3 class="text-base font-medium">{{ product.name }}</h3>
+      <div class="flex justify-between mt-4 text-sm text-secondary-steel">
+        <span>{{ product.color }}</span>
+        <span>{{ "$" + product.price }}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+<div class="container mx-auto pt-10">
+  <h1>ADMIN PAGE</h1>
+
+  <div class="mt-10">
+    <form [formGroup]="addProductForm" (ngSubmit)="handleSubmit()">
+      <h1>ADD NEW PRODUCT</h1>
+      <div class="flex gap-4 my-4">
+        <div>
+          <label for="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            class="outline-none px-4 py-2 border border-gray-300 rounded-xl ml-4"
+            formControlName="name"
+          />
+        </div>
+        <div>
+          <label for="model">Model</label>
+          <input
+            id="model"
+            type="text"
+            class="outline-none px-4 py-2 border border-gray-300 rounded-xl ml-4"
+            formControlName="model"
+          />
+        </div>
+        <div>
+          <label for="price">Price</label>
+          <input
+            id="price"
+            type="text"
+            class="outline-none px-4 py-2 border border-gray-300 rounded-xl ml-4"
+            formControlName="price"
+          />
+        </div>
+      </div>
+      <div class="flex gap-4 my-4">
+        <div>
+          <label for="image">Image link</label>
+          <input
+            id="image"
+            type="text"
+            class="outline-none px-4 py-2 border border-gray-300 rounded-xl ml-4"
+            formControlName="image"
+          />
+        </div>
+        <div>
+          <label for="color">Color</label>
+          <input
+            id="color"
+            type="text"
+            class="outline-none px-4 py-2 border border-gray-300 rounded-xl ml-4"
+            formControlName="color"
+          />
+        </div>
+        <div>
+          <label for="total_rating">Total rating</label>
+          <input
+            id="total_rating"
+            type="text"
+            class="outline-none px-4 py-2 border border-gray-300 rounded-xl ml-4"
+            formControlName="total_rating"
+          />
+        </div>
+      </div>
+      <div class="flex gap-4 my-4">
+        <div>
+          <label for="rating">Rating</label>
+          <input
+            id="rating"
+            type="text"
+            class="outline-none px-4 py-2 border border-gray-300 rounded-xl ml-4"
+            formControlName="rating"
+          />
+        </div>
+        <div>
+          <label for="size">Size</label>
+          <input
+            id="size"
+            type="text"
+            class="outline-none px-4 py-2 border border-gray-300 rounded-xl ml-4"
+            formControlName="size"
+          />
+        </div>
+        <div>
+          <label for="type">Type</label>
+          <select
+            formControlName="type"
+            name="type"
+            id="type"
+            class="outline-none px-4 py-2 border border-gray-300 rounded-xl ml-4"
+          >
+            <option value="shoes">Shoes</option>
+            <option value="accessories">Accessories</option>
+          </select>
+          <!-- <input
+            id="type"
+            type="text"
+            class="outline-none px-4 py-2 border border-gray-300 rounded-xl ml-4"
+            formControlName="type"
+          /> -->
+        </div>
+      </div>
+      <button class="px-4 py-2 bg-primary rounded-full text-white">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

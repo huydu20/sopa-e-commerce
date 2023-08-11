@@ -6,7 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent {
-  @Input() width = 0;
-  @Input() height = 0;
   @Input() listCarousel: any = [];
+
+  slideIndex = 1;
+
+  changeSlide(idx: number) {
+    this.slideIndex = idx + 1;
+  }
 }
